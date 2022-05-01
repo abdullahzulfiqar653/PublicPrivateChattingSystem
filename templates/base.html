@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PP Chatting System</title>
+  </head>
+  <body>
+      <!-- Header using jinja -->
+    {% include 'common/header.html' %}
+    {% include 'common/base_css.html' %}
+    {% include 'common/base_js.html' %}
+    <style type="text/css">
+      .main {
+        min-height: 100vh;
+        height: 100%;
+      }
+    </style>
+    <!-- Body using jinja -->
+    <div class="main">{% block content %} {% endblock content%}</div>
+    <!-- Footer using jinja -->
+    {% include 'common/footer.html' %}
+  </body>
+</html>
