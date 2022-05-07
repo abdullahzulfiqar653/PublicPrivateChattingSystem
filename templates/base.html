@@ -1,30 +1,40 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link
       rel="stylesheet"
       href="{% static 'bootstrap/css/bootstrap.min.css' %}"
     />
-    <title>PP Chatting System</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <!-- Header using jinja -->
-    {% include 'common/header.html' %} {% include 'common/base_css.html' %} 
-    {% include 'common/base_js.html' %}
+    {% include 'common/base_css.html' %} {% include 'common/base_js.html' %}
+    {% include 'common/header.html' %}
+
+    <!-- Body -->
     <style type="text/css">
       .main {
         min-height: 100vh;
         height: 100%;
       }
     </style>
-    <!-- Body using jinja -->
-    <div class="main">{% block content %} {% endblock content%}</div>
-    <!-- Footer using jinja -->
+    <div class="main">{% block content %} {% endblock content %}</div>
+    <!-- End Body -->
+
     {% include 'common/footer.html' %}
+
     <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   </body>
